@@ -1,7 +1,7 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Heart, Clock, ArrowUp } from 'lucide-react';
 import { MASJID_PROFILE } from '../data/mockData';
-import { IslamicWatermark } from './IslamicMotif';
+import { IslamicCrescent, IslamicLantern } from './IslamicAmbientElements';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -10,7 +10,13 @@ export const Footer: React.FC = () => {
 
   return (
     <footer className="relative bg-gradient-to-br from-muhammadiyah-950 via-muhammadiyah-900 to-muhammadiyah-950 text-slate-300 border-t border-muhammadiyah-800 overflow-hidden">
-      <IslamicWatermark position="bottom-right" size={400} opacity="opacity-[0.05]" isDark={true} />
+      {/* Ornamen Keislaman Halus Footer */}
+      <div className="absolute top-10 right-[6%] animate-float opacity-30 pointer-events-none hidden md:block">
+        <IslamicLantern size={42} color="gold" />
+      </div>
+      <div className="absolute bottom-12 left-[4%] animate-float opacity-25 pointer-events-none hidden md:block">
+        <IslamicCrescent size={40} color="emerald" />
+      </div>
 
       {/* Bagian Utama Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16 relative z-10">

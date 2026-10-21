@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-scale: 1rem;
+}
+
+html {
+  font-size: var(--font-scale);
+  scroll-behavior: smooth;
+}
+
+/* 
+  Senior-Friendly Scrollbar 
+  Wajib tampak jelas, berukuran proporsional (14px), kontras tinggi,
+  dan mudah digulir oleh jamaah lansia / orang tua.
+*/
+::-webkit-scrollbar {
+  width: 14px !important;
+  height: 14px !important;
+  display: block !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #E2E8F0 !important;
+  border-left: 1px solid #CBD5E1 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #125A9B !important;
+  border-radius: 8px !important;
+  border: 3px solid #E2E8F0 !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0C2B4E !important;
+}
+
+* {
+  scrollbar-width: auto !important;
+  scrollbar-color: #125A9B #E2E8F0 !important;
+}
+
+/* Islamic Geometric Pattern Background Utilities */
+.islamic-pattern {
+  background-color: #0C2B4E;
+  background-image: radial-gradient(rgba(245, 158, 11, 0.15) 1px, transparent 0),
+                    radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+.islamic-pattern-light {
+  background-color: #F8FAFC;
+  background-image: radial-gradient(rgba(18, 90, 155, 0.08) 1px, transparent 0),
+                    radial-gradient(rgba(245, 158, 11, 0.06) 1px, transparent 0);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+}
+
+/* Senior-Friendly Readability Font Scales */
+body.font-mode-normal {
+  --font-scale: 16px;
+}
+body.font-mode-large {
+  --font-scale: 18px;
+}
+body.font-mode-xlarge {
+  --font-scale: 20px;
+}
+
+/* Accessible Focus States */
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 3px solid #F59E0B !important;
+  outline-offset: 2px !important;
+}

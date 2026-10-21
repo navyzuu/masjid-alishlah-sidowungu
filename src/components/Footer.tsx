@@ -17,18 +17,14 @@ export const Footer: React.FC = () => {
           {/* Kolom Profil Masjid (lg:col-span-5) */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-muhammadiyah-900 border border-surya-500/40 p-1.5 shadow-sm">
-                <img
-                  src="/logo-muhammadiyah.svg"
-                  alt="Logo Muhammadiyah"
-                  className="w-full h-full object-contain"
-                />
+              <div className="px-2.5 py-1.5 border border-dashed border-slate-600 rounded bg-slate-900 text-[10px] font-mono text-slate-400 uppercase tracking-wider">
+                [Slot Logo]
               </div>
               <div>
-                <span className="text-xl font-black text-white tracking-tight block">
+                <span className="text-xl font-bold text-white tracking-tight block">
                   MASJID AL-ISHLAH
                 </span>
-                <span className="text-xs text-surya-400 font-bold tracking-wider uppercase">
+                <span className="text-xs text-amber-400 font-semibold tracking-wider uppercase">
                   Pimpinan Ranting Muhammadiyah Sidowungu
                 </span>
               </div>

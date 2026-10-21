@@ -116,25 +116,25 @@ export const LocationContact: React.FC = () => {
           </div>
 
           {/* Kolom Peta Google Maps Embed */}
-          <div className="lg:col-span-7 rounded-3xl overflow-hidden border border-slate-200 shadow-card bg-slate-200 min-h-[380px] sm:min-h-[460px] relative">
+          <div className="lg:col-span-7 rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-slate-100 min-h-[380px] sm:min-h-[460px] relative">
             <iframe
               title="Peta Lokasi Masjid Al-Ishlah Sidowungu Menganti Gresik"
-              src="https://maps.google.com/maps?q=Sidowungu,+Menganti,+Gresik,+Jawa+Timur&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=-7.2963785,112.5999143&t=&z=17&ie=UTF8&iwloc=&output=embed"
               className="w-full h-full min-h-[380px] sm:min-h-[460px] border-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
             
             {/* Overlay Tag Lokasi */}
-            <div className="absolute bottom-4 left-4 right-4 sm:right-auto bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-elevated border border-slate-200 max-w-sm">
+            <div className="absolute bottom-4 left-4 right-4 sm:right-auto bg-white p-3.5 rounded-xl shadow-sm border border-slate-200 max-w-sm">
               <div className="flex items-center gap-2.5">
-                <div className="w-3 h-3 rounded-full bg-emerald-500 animate-ping"></div>
+                <div className="w-2.5 h-2.5 rounded-full bg-emerald-600"></div>
                 <div>
                   <div className="font-extrabold text-xs sm:text-sm text-slate-900">
                     Masjid Al-Ishlah Sidowungu
                   </div>
                   <div className="text-[11px] text-slate-500">
-                    Sidowungu, Menganti, Kab. Gresik, Jawa Timur
+                    7°17'47.0"S 112°35'59.7"E &bull; Menganti, Gresik
                   </div>
                 </div>
               </div>

@@ -25,17 +25,17 @@ export const SeniorFontControl: React.FC = () => {
   };
 
   return (
-    <div className="inline-flex items-center gap-1.5 bg-muhammadiyah-800/80 border border-muhammadiyah-600/60 rounded-lg p-1 text-white shadow-sm" title="Pilihan Ukuran Huruf (Ramah Lansia)">
-      <div className="flex items-center gap-1 pl-1 pr-1 text-xs text-slate-300 font-medium">
-        <Type className="w-3.5 h-3.5 text-surya-400" />
+    <div className="inline-flex items-center gap-1 bg-white border border-slate-200 rounded-lg p-1 text-slate-800 shadow-sm" title="Ukuran Font (Aksesibilitas Lansia)">
+      <div className="flex items-center gap-1 px-1.5 text-xs text-slate-500 font-medium">
+        <Type className="w-3.5 h-3.5 text-slate-600" />
         <span className="hidden sm:inline">Teks:</span>
       </div>
       <button
         onClick={() => handleSelect('normal')}
         className={`px-2 py-1 rounded text-xs font-semibold transition-all ${
           scaleMode === 'normal'
-            ? 'bg-surya-500 text-muhammadiyah-950 font-bold shadow-sm'
-            : 'text-slate-200 hover:bg-muhammadiyah-700/60'
+            ? 'bg-slate-900 text-white font-bold'
+            : 'text-slate-600 hover:bg-slate-100'
         }`}
         aria-label="Ukuran font standar"
       >
@@ -45,8 +45,8 @@ export const SeniorFontControl: React.FC = () => {
         onClick={() => handleSelect('large')}
         className={`px-2.5 py-1 rounded text-sm font-semibold transition-all ${
           scaleMode === 'large'
-            ? 'bg-surya-500 text-muhammadiyah-950 font-bold shadow-sm'
-            : 'text-slate-200 hover:bg-muhammadiyah-700/60'
+            ? 'bg-slate-900 text-white font-bold'
+            : 'text-slate-600 hover:bg-slate-100'
         }`}
         aria-label="Ukuran font besar untuk lansia"
       >
@@ -56,8 +56,8 @@ export const SeniorFontControl: React.FC = () => {
         onClick={() => handleSelect('xlarge')}
         className={`px-2.5 py-1 rounded text-base font-bold transition-all ${
           scaleMode === 'xlarge'
-            ? 'bg-surya-500 text-muhammadiyah-950 font-bold shadow-sm'
-            : 'text-slate-200 hover:bg-muhammadiyah-700/60'
+            ? 'bg-slate-900 text-white font-bold'
+            : 'text-slate-600 hover:bg-slate-100'
         }`}
         aria-label="Ukuran font ekstra besar"
       >

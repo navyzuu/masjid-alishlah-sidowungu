@@ -113,17 +113,17 @@ export const PrayerTimes: React.FC<PrayerTimesProps> = ({
   };
 
   return (
-    <section id="jadwal-sholat" className="py-14 sm:py-20 bg-gradient-to-b from-white via-slate-50 to-slate-100 border-b border-slate-200">
+    <section id="jadwal-sholat" className="py-14 sm:py-20 bg-slate-50 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section Jadwal Sholat */}
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-muhammadiyah-100 text-muhammadiyah-800 text-xs sm:text-sm font-bold border border-muhammadiyah-200">
-            <Clock className="w-4 h-4 text-muhammadiyah-700" />
-            <span>Koordinat Presisi: 7°15'55.8"S 112°34'05.9"E</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-white text-slate-700 text-xs sm:text-sm font-semibold border border-slate-200 shadow-sm">
+            <Clock className="w-4 h-4 text-slate-600" />
+            <span>Koordinat Presisi: 7°17'47.0"S 112°35'59.7"E (Sidowungu Menganti)</span>
           </div>
           
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-muhammadiyah-950 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
             Jadwal Adzan & Waktu Sholat Sidowungu
           </h2>
           
@@ -132,41 +132,41 @@ export const PrayerTimes: React.FC<PrayerTimesProps> = ({
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2 text-xs sm:text-sm">
-            <span className="bg-slate-200/80 text-slate-800 px-3 py-1 rounded-md font-semibold">
+            <span className="bg-white text-slate-700 px-3 py-1 rounded border border-slate-200 font-medium">
               Masehi: {dateInfo.gregorianDate}
             </span>
-            <span className="bg-amber-100 text-amber-900 px-3 py-1 rounded-md font-semibold border border-amber-300/60">
+            <span className="bg-amber-50 text-amber-900 px-3 py-1 rounded border border-amber-200 font-semibold">
               Hijriyah: {dateInfo.hijriDate}
             </span>
             <button
               onClick={onRefresh}
               disabled={isLoading}
-              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 text-xs font-semibold shadow-sm transition-all active:scale-95"
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 text-xs font-semibold shadow-sm transition-all"
               title="Perbarui Waktu dari Server API"
             >
-              <RefreshCw className={`w-3.5 h-3.5 ${isLoading ? 'animate-spin text-muhammadiyah-700' : ''}`} />
+              <RefreshCw className={`w-3.5 h-3.5 ${isLoading ? 'animate-spin text-slate-800' : ''}`} />
               <span>{isLoading ? 'Memuat...' : 'Sinkronkan'}</span>
             </button>
           </div>
         </div>
 
         {/* Pemberitahuan Resmi Hisab Subuh Muhammadiyah (+8 Menit) */}
-        <div className="mb-8 p-4 sm:p-5 rounded-2xl bg-amber-50/90 border-2 border-amber-300/80 shadow-subtle flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div className="mb-8 p-5 rounded-xl bg-white border border-amber-300 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div className="flex items-start gap-3.5">
-            <div className="p-2.5 rounded-xl bg-amber-500 text-muhammadiyah-950 flex-shrink-0 mt-0.5">
-              <ShieldCheck className="w-6 h-6" />
+            <div className="p-2.5 rounded-lg bg-amber-500 text-slate-950 flex-shrink-0 mt-0.5">
+              <ShieldCheck className="w-5 h-5 text-white" />
             </div>
             <div>
               <div className="flex items-center gap-2 flex-wrap">
-                <h3 className="font-extrabold text-amber-950 text-base sm:text-lg">
+                <h3 className="font-extrabold text-slate-900 text-base sm:text-lg">
                   Ketetapan Waktu Adzan Shubuh Persyarikatan Muhammadiyah
                 </h3>
-                <span className="px-2 py-0.5 text-xs font-black bg-amber-200 text-amber-900 rounded-md border border-amber-400">
+                <span className="px-2 py-0.5 text-xs font-bold bg-amber-100 text-amber-900 rounded border border-amber-300">
                   WAJIB +8 MENIT
                 </span>
               </div>
-              <p className="text-xs sm:text-sm text-amber-900/90 mt-1 leading-relaxed">
-                Berdasarkan Keputusan <strong>Munas Tarjih Muhammadiyah ke-31</strong>, fajar shadiq berada pada posisi matahari <strong>-18°</strong> (sebelumnya -20°). Maka waktu adzan Shubuh di Masjid Al-Ishlah Sidowungu <strong>dimundurkan/dilebihi 8 menit</strong> dibanding hisab kementerian.
+              <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
+                Berdasarkan Keputusan <strong>Munas Tarjih Muhammadiyah ke-31</strong>, fajar shadiq berada pada posisi matahari <strong>-18°</strong>. Maka waktu adzan Shubuh di Masjid Al-Ishlah Sidowungu <strong>dimundurkan 8 menit</strong> dibanding hisab kementerian.
               </p>
             </div>
           </div>
@@ -174,22 +174,22 @@ export const PrayerTimes: React.FC<PrayerTimesProps> = ({
           <div className="flex items-center gap-2 flex-shrink-0 w-full md:w-auto">
             <button
               onClick={() => setShowTarjihModal(true)}
-              className="w-full md:w-auto px-4 py-2.5 text-xs sm:text-sm font-bold bg-white hover:bg-amber-100 text-amber-950 border border-amber-400 rounded-xl shadow-sm transition-colors text-center"
+              className="w-full md:w-auto px-4 py-2.5 text-xs sm:text-sm font-semibold bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 rounded-lg shadow-sm transition-colors text-center"
             >
-              Baca Dalil & Penjelasan Tarjih
+              Baca Dalil Tarjih
             </button>
             <button
               onClick={handleTestChime}
-              className="px-3 py-2.5 text-xs font-semibold bg-amber-200/80 hover:bg-amber-300 text-amber-900 rounded-xl transition-colors flex items-center gap-1"
+              className="px-3 py-2.5 text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg transition-colors flex items-center gap-1"
               title="Coba Nada Pengingat"
             >
-              <Volume2 className="w-4 h-4" />
+              <Volume2 className="w-4 h-4 text-slate-600" />
               <span>{audioPlayed ? 'Terdengar' : 'Bel'}</span>
             </button>
           </div>
         </div>
 
-        {/* Grid Kartu Waktu Sholat (Sangat Ramah Lansia - Huruf Besar & Kontras) */}
+        {/* Grid Kartu Waktu Sholat */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3 sm:gap-4">
           {prayerList.map((item) => {
             const Icon = item.icon;
@@ -198,71 +198,71 @@ export const PrayerTimes: React.FC<PrayerTimesProps> = ({
             return (
               <div
                 key={item.id}
-                className={`relative flex flex-col justify-between p-4 sm:p-5 rounded-2xl transition-all duration-200 border-2 ${
+                className={`relative flex flex-col justify-between p-4 sm:p-5 rounded-xl transition-all border ${
                   item.isSubuh
-                    ? 'bg-gradient-to-b from-muhammadiyah-900 to-muhammadiyah-950 text-white border-amber-400 shadow-elevated ring-2 ring-amber-400/40'
+                    ? 'bg-white border-amber-400 ring-1 ring-amber-300 shadow-sm'
                     : isNext
-                    ? 'bg-gradient-to-b from-muhammadiyah-800 to-muhammadiyah-900 text-white border-surya-400 shadow-card'
-                    : 'bg-white text-slate-800 border-slate-200 hover:border-muhammadiyah-300 shadow-sm'
+                    ? 'bg-slate-900 text-white border-slate-800 shadow-sm'
+                    : 'bg-white text-slate-800 border-slate-200 hover:border-slate-300 shadow-sm'
                 }`}
               >
                 {/* Badge Waktu Khusus */}
                 {item.isSubuh && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-amber-400 text-muhammadiyah-950 font-black text-[10px] sm:text-xs px-2.5 py-0.5 rounded-full shadow-sm">
-                    RESMI TARJIH
+                  <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 whitespace-nowrap bg-amber-500 text-slate-950 font-black text-[10px] px-2 py-0.5 rounded shadow-xs">
+                    TARJIH (+8 MNT)
                   </div>
                 )}
                 {isNext && !item.isSubuh && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-emerald-500 text-white font-black text-[10px] sm:text-xs px-2.5 py-0.5 rounded-full shadow-sm">
+                  <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 whitespace-nowrap bg-emerald-600 text-white font-bold text-[10px] px-2 py-0.5 rounded shadow-xs">
                     SELANJUTNYA
                   </div>
                 )}
 
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <div className={`p-2 rounded-xl ${
+                    <div className={`p-2 rounded-lg ${
                       item.isSubuh
-                        ? 'bg-amber-400/20 text-amber-300'
+                        ? 'bg-amber-50 text-amber-700'
                         : isNext
-                        ? 'bg-surya-400/20 text-surya-300'
-                        : 'bg-slate-100 text-muhammadiyah-700'
+                        ? 'bg-slate-800 text-amber-400'
+                        : 'bg-slate-100 text-slate-600'
                     }`}>
                       <Icon className="w-5 h-5" />
                     </div>
                     <span className={`font-arabic text-sm ${
-                      item.isSubuh || isNext ? 'text-amber-200/80' : 'text-slate-400'
+                      isNext ? 'text-slate-300' : 'text-slate-400'
                     }`}>
                       {item.arabic}
                     </span>
                   </div>
 
-                  <h4 className={`text-base sm:text-lg font-black tracking-tight ${
-                    item.isSubuh || isNext ? 'text-white' : 'text-slate-900'
+                  <h4 className={`text-base font-black tracking-tight ${
+                    isNext ? 'text-white' : 'text-slate-900'
                   }`}>
                     {item.name}
                   </h4>
-                  <p className={`text-[11px] font-semibold ${
-                    item.isSubuh ? 'text-amber-300' : isNext ? 'text-surya-200' : 'text-slate-500'
+                  <p className={`text-[11px] font-medium ${
+                    item.isSubuh ? 'text-amber-800 font-bold' : isNext ? 'text-slate-300' : 'text-slate-500'
                   }`}>
                     {item.badge}
                   </p>
                 </div>
 
-                {/* Angka Jam (Besar, Tebal, Jelas untuk Lansia) */}
-                <div className="mt-4 pt-3 border-t border-slate-200/20">
+                {/* Angka Jam */}
+                <div className="mt-4 pt-3 border-t border-slate-100">
                   <div className={`text-2xl sm:text-3xl font-black font-mono tracking-tight ${
                     item.isSubuh
-                      ? 'text-amber-300'
+                      ? 'text-amber-700'
                       : isNext
-                      ? 'text-surya-300'
-                      : 'text-muhammadiyah-950'
+                      ? 'text-white'
+                      : 'text-slate-900'
                   }`}>
                     {item.time} <span className="text-xs font-sans font-bold">WIB</span>
                   </div>
 
                   {item.isSubuh && item.originalTime && (
-                    <div className="mt-1 text-[10px] text-slate-300 font-medium">
-                      Standar Kemenag: {item.originalTime} (+8 mnt)
+                    <div className="mt-1 text-[10px] text-slate-500 font-medium">
+                      Kemenag: {item.originalTime} (+8 mnt)
                     </div>
                   )}
                 </div>

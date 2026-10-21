@@ -9,6 +9,8 @@
 html {
   font-size: var(--font-scale);
   scroll-behavior: smooth;
+  background-color: #FAFAFA;
+  color: #111827;
 }
 
 /* 
@@ -23,40 +25,23 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #E2E8F0 !important;
-  border-left: 1px solid #CBD5E1 !important;
+  background: #F1F5F9 !important;
+  border-left: 1px solid #E2E8F0 !important;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #125A9B !important;
-  border-radius: 8px !important;
-  border: 3px solid #E2E8F0 !important;
+  background-color: #0F2E4E !important;
+  border-radius: 6px !important;
+  border: 3px solid #F1F5F9 !important;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #0C2B4E !important;
+  background-color: #0A1E33 !important;
 }
 
 * {
   scrollbar-width: auto !important;
-  scrollbar-color: #125A9B #E2E8F0 !important;
-}
-
-/* Islamic Geometric Pattern Background Utilities */
-.islamic-pattern {
-  background-color: #0C2B4E;
-  background-image: radial-gradient(rgba(245, 158, 11, 0.15) 1px, transparent 0),
-                    radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0);
-  background-size: 24px 24px;
-  background-position: 0 0, 12px 12px;
-}
-
-.islamic-pattern-light {
-  background-color: #F8FAFC;
-  background-image: radial-gradient(rgba(18, 90, 155, 0.08) 1px, transparent 0),
-                    radial-gradient(rgba(245, 158, 11, 0.06) 1px, transparent 0);
-  background-size: 28px 28px;
-  background-position: 0 0, 14px 14px;
+  scrollbar-color: #0F2E4E #F1F5F9 !important;
 }
 
 /* Senior-Friendly Readability Font Scales */
@@ -72,6 +57,6 @@ body.font-mode-xlarge {
 
 /* Accessible Focus States */
 button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
-  outline: 3px solid #F59E0B !important;
+  outline: 2px solid #0F2E4E !important;
   outline-offset: 2px !important;
 }

@@ -1,11 +1,11 @@
 import { PrayerTimes, PrayerDateInfo, NextPrayerInfo } from '../types';
 
-// Koordinat Presisi Masjid Al-Ishlah Sidowungu, Kec. Menganti, Kab. Gresik
+// Koordinat Presisi Masjid Al-Ishlah Sidowungu (berdasarkan Google Maps: https://maps.app.goo.gl/VedUu7nzekCqQRTF8)
 export const LOCATION_CONFIG = {
   name: 'Sidowungu, Menganti, Gresik',
   province: 'Jawa Timur',
-  latitude: -7.2655,
-  longitude: 112.5683,
+  latitude: -7.2963785,
+  longitude: 112.5999143,
   timezone: 'Asia/Jakarta',
   tarjihSubuhOffsetMinutes: 8, // Koreksi Munas Tarjih Muhammadiyah ke-31 (-18 derajat / +8 menit)
 };

@@ -9,7 +9,7 @@ export const MASJID_PROFILE = {
   tagline: 'Memakmurkan Masjid, Mencerahkan Umat, Berkemajuan Berlandaskan Al-Qur’an & As-Sunnah',
   phone: '+62 812-3456-7890',
   email: 'takmir@masjid-alishlah.napuiss.my.id',
-  mapsUrl: 'https://maps.google.com/?q=Masjid+Al-Ishlah+Sidowungu+Menganti+Gresik',
+  mapsUrl: 'https://maps.app.goo.gl/VedUu7nzekCqQRTF8',
   establishedYear: '1984',
   landArea: '1.250 m²',
   capacity: '850 Jamaah',

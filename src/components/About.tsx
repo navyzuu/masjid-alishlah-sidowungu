@@ -1,12 +1,14 @@
 import React from 'react';
 import { Shield, BookOpen, Users, Compass, CheckCircle2, Award } from 'lucide-react';
 import { MASJID_PROFILE } from '../data/mockData';
-import { IslamicStarDivider } from './IslamicMotif';
+import { IslamicStarDivider, IslamicWatermark } from './IslamicMotif';
 
 export const About: React.FC = () => {
   return (
-    <section id="profil" className="py-16 sm:py-24 bg-white border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="profil" className="relative py-16 sm:py-24 bg-white border-b border-slate-200 overflow-hidden">
+      <IslamicWatermark position="bottom-right" size={360} opacity="opacity-[0.03]" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header Profil (Tanpa Pill Badge) */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-2">

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MOCK_AGENDA } from '../data/mockData';
 import { Calendar, Clock, MapPin, User, Tag, Sparkles } from 'lucide-react';
-import { IslamicStarDivider } from './IslamicMotif';
+import { IslamicStarDivider, IslamicWatermark } from './IslamicMotif';
 
 export const Agenda: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('Semua');
@@ -14,8 +14,10 @@ export const Agenda: React.FC = () => {
   });
 
   return (
-    <section id="agenda" className="py-16 sm:py-24 bg-white border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="agenda" className="relative py-16 sm:py-24 bg-white border-b border-slate-200 overflow-hidden">
+      <IslamicWatermark position="bottom-left" size={340} opacity="opacity-[0.03]" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header Section (Tanpa Pill Badge) */}
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-2">

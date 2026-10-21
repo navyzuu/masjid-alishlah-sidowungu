@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { PrayerTimes as PrayerTimesType, PrayerDateInfo, NextPrayerInfo } from '../types';
 import { Clock, Info, ShieldCheck, RefreshCw, Sun, Sunset, Moon, Sunrise, Volume2 } from 'lucide-react';
+import { IslamicWatermark } from './IslamicMotif';
 
 interface PrayerTimesProps {
   timings: PrayerTimesType;
@@ -113,8 +114,11 @@ export const PrayerTimes: React.FC<PrayerTimesProps> = ({
   };
 
   return (
-    <section id="jadwal-sholat" className="py-10 sm:py-14 bg-slate-50 border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="jadwal-sholat" className="relative py-10 sm:py-14 bg-slate-50 border-b border-slate-200 overflow-hidden">
+      <IslamicWatermark position="top-left" size={320} opacity="opacity-[0.03]" />
+      <IslamicWatermark position="bottom-right" size={280} opacity="opacity-[0.02]" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header Section Jadwal Sholat (Tanpa Pill Badge) */}
         <div className="text-center max-w-3xl mx-auto mb-7 space-y-2">

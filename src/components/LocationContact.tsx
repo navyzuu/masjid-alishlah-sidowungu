@@ -1,12 +1,14 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Clock, Navigation, MessageCircle, ExternalLink } from 'lucide-react';
 import { MASJID_PROFILE } from '../data/mockData';
-import { IslamicStarDivider } from './IslamicMotif';
+import { IslamicStarDivider, IslamicWatermark } from './IslamicMotif';
 
 export const LocationContact: React.FC = () => {
   return (
-    <section id="lokasi" className="py-16 sm:py-24 bg-slate-50 border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="lokasi" className="relative py-16 sm:py-24 bg-slate-50 border-b border-slate-200 overflow-hidden">
+      <IslamicWatermark position="top-right" size={340} opacity="opacity-[0.03]" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header Section (Tanpa Pill Badge) */}
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-2">

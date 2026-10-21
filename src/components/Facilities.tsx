@@ -1,7 +1,8 @@
 import React from 'react';
 import { MOCK_FACILITIES } from '../data/mockData';
 import { Wind, Accessibility, Droplets, Volume2, Ambulance, BookOpen, HeartHandshake } from 'lucide-react';
-import { IslamicStarDivider, IslamicWatermark, IslamicArabesqueBand } from './IslamicMotif';
+import { IslamicStarDivider } from './IslamicMotif';
+import { IslamicSectionDecor } from './IslamicAmbientElements';
 
 export const Facilities: React.FC = () => {
   const getIcon = (name: string) => {
@@ -25,8 +26,8 @@ export const Facilities: React.FC = () => {
 
   return (
     <section id="fasilitas" className="relative py-16 sm:py-24 bg-slate-50 border-b border-slate-200 overflow-hidden">
-      <IslamicWatermark position="top-right" size={380} opacity="opacity-[0.08]" />
-      <IslamicWatermark position="bottom-left" size={320} opacity="opacity-[0.06]" />
+      {/* Ornamen Keislaman Alami Berwarna */}
+      <IslamicSectionDecor variant="facilities" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -40,8 +41,8 @@ export const Facilities: React.FC = () => {
             Fasilitas Masjid Ramah Semua Usia
           </h2>
 
+          {/* Hanya 1 Divider Bintang Tunggal Islami */}
           <IslamicStarDivider />
-          <IslamicArabesqueBand className="-mt-2 mb-2" />
           
           <p className="text-sm sm:text-base text-slate-600 font-medium">
             Dirancang secara khusus dengan mengutamakan kenyamanan, kemudahan mobilitas, dan kebersihan prima bagi jamaah anak-anak hingga lansia sepuh.

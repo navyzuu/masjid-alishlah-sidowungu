@@ -1,13 +1,14 @@
 import React from 'react';
 import { MOCK_TAKMIR } from '../data/mockData';
 import { Users, Shield, CheckCircle } from 'lucide-react';
-import { IslamicStarDivider, IslamicWatermark, IslamicArabesqueBand } from './IslamicMotif';
+import { IslamicStarDivider } from './IslamicMotif';
+import { IslamicSectionDecor } from './IslamicAmbientElements';
 
 export const Takmir: React.FC = () => {
   return (
     <section id="pengurus" className="relative py-16 sm:py-24 bg-white border-b border-slate-200 overflow-hidden">
-      <IslamicWatermark position="bottom-left" size={380} opacity="opacity-[0.08]" />
-      <IslamicWatermark position="top-right" size={320} opacity="opacity-[0.06]" />
+      {/* Ornamen Keislaman Alami Berwarna */}
+      <IslamicSectionDecor variant="takmir" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -21,8 +22,8 @@ export const Takmir: React.FC = () => {
             Struktur Takmir Masjid Al-Ishlah
           </h2>
 
+          {/* Hanya 1 Divider Bintang Tunggal Islami */}
           <IslamicStarDivider />
-          <IslamicArabesqueBand className="-mt-2 mb-2" />
           
           <p className="text-sm sm:text-base text-slate-600 font-medium">
             Masa Bakti Khidmat 2024–2028 &bull; Di bawah Naungan Pimpinan Ranting Muhammadiyah Sidowungu

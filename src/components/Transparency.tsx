@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { MOCK_KAS } from '../data/mockData';
 import { Wallet, TrendingUp, TrendingDown, FileText, CheckCircle, Filter, Download } from 'lucide-react';
-import { IslamicStarDivider, IslamicWatermark, IslamicArabesqueBand } from './IslamicMotif';
+import { IslamicStarDivider } from './IslamicMotif';
+import { IslamicSectionDecor } from './IslamicAmbientElements';
 
 interface TransparencyProps {
   onOpenZiswaf: () => void;
@@ -55,8 +56,8 @@ Laporan ini diumumkan secara transparan kepada jamaah sholat Jumat dan diaudit o
 
   return (
     <section id="transparansi-kas" className="relative py-16 sm:py-24 bg-gradient-to-br from-muhammadiyah-950 via-muhammadiyah-900 to-muhammadiyah-950 text-white border-b border-muhammadiyah-800 overflow-hidden">
-      <IslamicWatermark position="top-right" size={440} opacity="opacity-[0.10]" isDark={true} />
-      <IslamicWatermark position="bottom-left" size={380} opacity="opacity-[0.08]" isDark={true} />
+      {/* Ornamen Keislaman Alami: Lentera Bercahaya, Bulan Sabit Emas & Rosette Warna */}
+      <IslamicSectionDecor variant="kas" isDark={true} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -70,8 +71,8 @@ Laporan ini diumumkan secara transparan kepada jamaah sholat Jumat dan diaudit o
             Transparansi Laporan Kas & Infaq
           </h2>
 
+          {/* Hanya 1 Divider Bintang Tunggal Islami */}
           <IslamicStarDivider isDark={true} />
-          <IslamicArabesqueBand isDark={true} className="-mt-2 mb-2" />
           
           <p className="text-sm sm:text-base text-slate-300 font-medium">
             Periode: <strong className="text-surya-300">{MOCK_KAS.period}</strong> &bull; Pembaruan Terakhir: {MOCK_KAS.lastUpdated}

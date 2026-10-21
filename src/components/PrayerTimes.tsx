@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { PrayerTimes as PrayerTimesType, PrayerDateInfo, NextPrayerInfo } from '../types';
 import { Clock, Info, ShieldCheck, RefreshCw, Sun, Sunset, Moon, Sunrise, Volume2 } from 'lucide-react';
-import { IslamicWatermark, IslamicStarDivider, IslamicArabesqueBand } from './IslamicMotif';
+import { IslamicStarDivider } from './IslamicMotif';
+import { IslamicSectionDecor } from './IslamicAmbientElements';
 
 interface PrayerTimesProps {
   timings: PrayerTimesType;
@@ -115,8 +116,8 @@ export const PrayerTimes: React.FC<PrayerTimesProps> = ({
 
   return (
     <section id="jadwal-sholat" className="relative py-12 sm:py-16 bg-slate-50 border-b border-slate-200 overflow-hidden">
-      <IslamicWatermark position="top-left" size={380} opacity="opacity-[0.08]" />
-      <IslamicWatermark position="bottom-right" size={320} opacity="opacity-[0.06]" />
+      {/* Ornamen Keislaman Alami Berwarna: Bulan Sabit Emas, Lentera, & Bintang */}
+      <IslamicSectionDecor variant="prayer" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -131,8 +132,8 @@ export const PrayerTimes: React.FC<PrayerTimesProps> = ({
             Jadwal Adzan & Waktu Sholat Sidowungu
           </h2>
 
+          {/* Hanya 1 Divider Bintang Tunggal Islami */}
           <IslamicStarDivider />
-          <IslamicArabesqueBand className="-mt-2 mb-2" />
           
           <p className="text-xs sm:text-sm text-slate-600 font-medium">
             Wilayah Desa Sidowungu, Kecamatan Menganti, Kabupaten Gresik &bull; Waktu Indonesia Barat (WIB)

@@ -1,22 +1,24 @@
 import React from 'react';
 import { MOCK_TAKMIR } from '../data/mockData';
 import { Users, Shield, CheckCircle } from 'lucide-react';
+import { IslamicStarDivider } from './IslamicMotif';
 
 export const Takmir: React.FC = () => {
   return (
     <section id="pengurus" className="py-16 sm:py-24 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Header Section */}
-        <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-muhammadiyah-50 text-muhammadiyah-700 text-xs sm:text-sm font-bold border border-muhammadiyah-200">
-            <Users className="w-4 h-4 text-surya-500" />
-            <span>Kepengurusan Amanah & Melayani</span>
+        {/* Header Section (Tanpa Pill Badge) */}
+        <div className="text-center max-w-3xl mx-auto mb-10 space-y-2">
+          <div className="text-xs uppercase font-extrabold tracking-widest text-muhammadiyah-700">
+            Kepengurusan Amanah & Melayani
           </div>
           
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-muhammadiyah-950 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-muhammadiyah-950 tracking-tight">
             Struktur Takmir Masjid Al-Ishlah
           </h2>
+
+          <IslamicStarDivider />
           
           <p className="text-sm sm:text-base text-slate-600 font-medium">
             Masa Bakti Khidmat 2024–2028 &bull; Di bawah Naungan Pimpinan Ranting Muhammadiyah Sidowungu

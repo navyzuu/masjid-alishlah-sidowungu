@@ -1,22 +1,24 @@
 import React from 'react';
 import { Shield, BookOpen, Users, Compass, CheckCircle2, Award } from 'lucide-react';
 import { MASJID_PROFILE } from '../data/mockData';
+import { IslamicStarDivider } from './IslamicMotif';
 
 export const About: React.FC = () => {
   return (
     <section id="profil" className="py-16 sm:py-24 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Header Profil */}
-        <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-muhammadiyah-50 text-muhammadiyah-700 text-xs sm:text-sm font-bold border border-muhammadiyah-200">
-            <Award className="w-4 h-4 text-surya-500" />
-            <span>Profil & Sejarah Persyarikatan</span>
+        {/* Header Profil (Tanpa Pill Badge) */}
+        <div className="text-center max-w-3xl mx-auto mb-12 space-y-2">
+          <div className="text-xs uppercase font-extrabold tracking-widest text-muhammadiyah-700">
+            Profil & Sejarah Persyarikatan
           </div>
           
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-muhammadiyah-950 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-muhammadiyah-950 tracking-tight">
             Mengenal Masjid Al-Ishlah Sidowungu
           </h2>
+
+          <IslamicStarDivider />
           
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
             Tonggak pembinaan iman, ilmu, dan amal sholeh warga Sidowungu, Menganti, Kabupaten Gresik sejak tahun 1984.

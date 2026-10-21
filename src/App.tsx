@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { PrayerTimes } from './components/PrayerTimes';
@@ -13,6 +14,8 @@ import { Footer } from './components/Footer';
 import { ZiswafModal } from './components/ZiswafModal';
 import { fetchPrayerTimes, getNextPrayer, getFallbackTimings } from './utils/prayerApi';
 import { PrayerTimes as PrayerTimesType, PrayerDateInfo, NextPrayerInfo } from './types';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const App: React.FC = () => {
   const [timings, setTimings] = useState<PrayerTimesType>(getFallbackTimings());
@@ -73,13 +76,32 @@ export const App: React.FC = () => {
     return () => clearInterval(interval);
   }, [timings]);
 
-  // 3. Motion Tanpa Memblokir Keterbacaan Konten (Opacity Tetap 100% Terbaca)
+  // 3. Motion Keislaman Halus (GSAP ScrollTrigger Reveal)
   useEffect(() => {
-    // Tidak menggunakan GSAP opacity: 0 yang membuat teks tampak pudar/hilang
+    if (!mainContainerRef.current) return;
+
+    const sections = mainContainerRef.current.querySelectorAll('section');
+    sections.forEach((sec) => {
+      gsap.fromTo(
+        sec,
+        { opacity: 0.9, y: 15 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: sec,
+            start: 'top 88%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
+    });
   }, []);
 
   return (
-    <div ref={mainContainerRef} className="min-h-screen flex flex-col bg-slate-50 text-slate-800">
+    <div ref={mainContainerRef} className="min-h-screen flex flex-col bg-slate-50 text-slate-800 overflow-x-hidden">
       
       {/* 1. Header & Navigation */}
       <Navbar onOpenZiswaf={() => setIsZiswafOpen(true)} />

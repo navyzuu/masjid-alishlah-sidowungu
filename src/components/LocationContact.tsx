@@ -1,22 +1,24 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Clock, Navigation, MessageCircle, ExternalLink } from 'lucide-react';
 import { MASJID_PROFILE } from '../data/mockData';
+import { IslamicStarDivider } from './IslamicMotif';
 
 export const LocationContact: React.FC = () => {
   return (
     <section id="lokasi" className="py-16 sm:py-24 bg-slate-50 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Header Section */}
-        <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-muhammadiyah-100 text-muhammadiyah-800 text-xs sm:text-sm font-bold border border-muhammadiyah-200">
-            <MapPin className="w-4 h-4 text-muhammadiyah-700" />
-            <span>Peta & Pusat Informasi</span>
+        {/* Header Section (Tanpa Pill Badge) */}
+        <div className="text-center max-w-3xl mx-auto mb-10 space-y-2">
+          <div className="text-xs uppercase font-extrabold tracking-widest text-muhammadiyah-700">
+            Peta & Pusat Informasi
           </div>
           
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-muhammadiyah-950 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-muhammadiyah-950 tracking-tight">
             Lokasi & Kontak Masjid
           </h2>
+
+          <IslamicStarDivider />
           
           <p className="text-sm sm:text-base text-slate-600 font-medium">
             Kunjungi Masjid Al-Ishlah di Desa Sidowungu, Menganti, Gresik. Siaga menyambut jamaah dan musafir.

@@ -116,14 +116,14 @@ export const PrayerTimes: React.FC<PrayerTimesProps> = ({
     <section id="jadwal-sholat" className="py-10 sm:py-14 bg-slate-50 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Header Section Jadwal Sholat */}
+        {/* Header Section Jadwal Sholat (Tanpa Pill Badge) */}
         <div className="text-center max-w-3xl mx-auto mb-7 space-y-2">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white text-slate-700 text-xs font-semibold border border-slate-200 shadow-xs">
-            <Clock className="w-3.5 h-3.5 text-slate-600" />
-            <span>Koordinat Presisi: 7°17'47.0"S 112°35'59.7"E (Sidowungu Menganti)</span>
+          <div className="text-xs uppercase font-extrabold tracking-widest text-muhammadiyah-700 flex items-center justify-center gap-2">
+            <Clock className="w-3.5 h-3.5 text-surya-600" />
+            <span>Koordinat Presisi: 7°17'47.0"S 112°35'59.7"E &bull; Sidowungu Menganti</span>
           </div>
           
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-black text-muhammadiyah-950 tracking-tight">
             Jadwal Adzan & Waktu Sholat Sidowungu
           </h2>
           
@@ -198,22 +198,22 @@ export const PrayerTimes: React.FC<PrayerTimesProps> = ({
             return (
               <div
                 key={item.id}
-                className={`relative flex flex-col justify-between p-4 sm:p-5 rounded-xl transition-all border ${
+                className={`relative flex flex-col justify-between p-4 sm:p-5 rounded-xl transition-all duration-300 border ${
                   item.isSubuh
-                    ? 'bg-white border-amber-400 ring-1 ring-amber-300 shadow-sm'
+                    ? 'bg-amber-50/40 border-2 border-amber-500 shadow-sm'
                     : isNext
-                    ? 'bg-slate-900 text-white border-slate-800 shadow-sm'
-                    : 'bg-white text-slate-800 border-slate-200 hover:border-slate-300 shadow-sm'
+                    ? 'bg-muhammadiyah-900 text-white border-surya-400 shadow-md ring-2 ring-surya-400/50 ring-offset-2'
+                    : 'bg-white text-slate-800 border-slate-200 hover:border-muhammadiyah-300 shadow-xs'
                 }`}
               >
                 {/* Badge Waktu Khusus */}
                 {item.isSubuh && (
-                  <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 whitespace-nowrap bg-amber-500 text-slate-950 font-black text-[10px] px-2 py-0.5 rounded shadow-xs">
+                  <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 whitespace-nowrap bg-gradient-to-r from-surya-500 to-surya-600 text-muhammadiyah-950 font-black text-[10px] px-2.5 py-0.5 rounded shadow-xs">
                     TARJIH (+8 MNT)
                   </div>
                 )}
                 {isNext && !item.isSubuh && (
-                  <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 whitespace-nowrap bg-emerald-600 text-white font-bold text-[10px] px-2 py-0.5 rounded shadow-xs">
+                  <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 whitespace-nowrap bg-emerald-600 text-white font-bold text-[10px] px-2 py-0.5 rounded shadow-xs animate-pulse">
                     SELANJUTNYA
                   </div>
                 )}
@@ -222,15 +222,15 @@ export const PrayerTimes: React.FC<PrayerTimesProps> = ({
                   <div className="flex items-center justify-between mb-2">
                     <div className={`p-2 rounded-lg ${
                       item.isSubuh
-                        ? 'bg-amber-50 text-amber-700'
+                        ? 'bg-amber-100 text-amber-800'
                         : isNext
-                        ? 'bg-slate-800 text-amber-400'
-                        : 'bg-slate-100 text-slate-600'
+                        ? 'bg-muhammadiyah-800 text-surya-300'
+                        : 'bg-slate-100 text-muhammadiyah-700'
                     }`}>
                       <Icon className="w-5 h-5" />
                     </div>
                     <span className={`font-arabic text-sm ${
-                      isNext ? 'text-slate-300' : 'text-slate-400'
+                      isNext ? 'text-amber-200' : 'text-slate-400'
                     }`}>
                       {item.arabic}
                     </span>
@@ -242,7 +242,7 @@ export const PrayerTimes: React.FC<PrayerTimesProps> = ({
                     {item.name}
                   </h4>
                   <p className={`text-[11px] font-medium ${
-                    item.isSubuh ? 'text-amber-800 font-bold' : isNext ? 'text-slate-300' : 'text-slate-500'
+                    item.isSubuh ? 'text-amber-900 font-bold' : isNext ? 'text-surya-200 font-semibold' : 'text-slate-500'
                   }`}>
                     {item.badge}
                   </p>
@@ -252,10 +252,10 @@ export const PrayerTimes: React.FC<PrayerTimesProps> = ({
                 <div className="mt-4 pt-3 border-t border-slate-100">
                   <div className={`text-2xl sm:text-3xl font-black font-mono tracking-tight ${
                     item.isSubuh
-                      ? 'text-amber-700'
+                      ? 'text-amber-800'
                       : isNext
-                      ? 'text-white'
-                      : 'text-slate-900'
+                      ? 'text-surya-300'
+                      : 'text-muhammadiyah-950'
                   }`}>
                     {item.time} <span className="text-xs font-sans font-bold">WIB</span>
                   </div>

@@ -47,19 +47,19 @@ export const Facilities: React.FC = () => {
           {MOCK_FACILITIES.map((fac) => (
             <div
               key={fac.id}
-              className="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-card hover:border-muhammadiyah-300 transition-all flex flex-col justify-between"
+              className="bg-white rounded-xl border border-slate-200 p-6 shadow-sm transition-all flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="p-3 rounded-2xl bg-slate-100 border border-slate-200">
+                  <div className="p-2.5 rounded-lg bg-slate-100 border border-slate-200">
                     {getIcon(fac.iconName)}
                   </div>
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 bg-slate-100 px-3 py-1 rounded-full">
+                  <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-500 bg-slate-100 px-2.5 py-0.5 rounded">
                     {fac.tag}
                   </span>
                 </div>
 
-                <h3 className="text-lg font-black text-slate-900 tracking-tight mb-2">
+                <h3 className="text-base font-bold text-slate-900 tracking-tight mb-2">
                   {fac.title}
                 </h3>
 
@@ -70,8 +70,8 @@ export const Facilities: React.FC = () => {
 
               {/* Callout Ramah Lansia */}
               {fac.seniorFriendlyNote && (
-                <div className="mt-2 p-3.5 rounded-2xl bg-amber-50/80 border border-amber-200/80 text-xs text-amber-950 font-medium">
-                  <strong className="text-amber-800 block mb-0.5">Prioritas Jamaah Sepuh:</strong>
+                <div className="mt-2 p-3 rounded-lg bg-amber-50/80 border border-amber-200 text-xs text-amber-950">
+                  <strong className="text-amber-900 block mb-0.5">Prioritas Jamaah Sepuh:</strong>
                   {fac.seniorFriendlyNote}
                 </div>
               )}
@@ -80,16 +80,16 @@ export const Facilities: React.FC = () => {
         </div>
 
         {/* Layanan Tambahan: Kursi Sholat & Pengantaran Lansia */}
-        <div className="mt-12 bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="mt-10 bg-white rounded-xl border border-slate-200 p-6 sm:p-7 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-2xl bg-muhammadiyah-100 text-muhammadiyah-800 flex items-center justify-center font-black text-xl flex-shrink-0">
-              ♿
+            <div className="w-12 h-12 rounded-lg bg-slate-100 text-slate-800 flex items-center justify-center flex-shrink-0 border border-slate-200">
+              <Accessibility className="w-6 h-6 text-slate-800" />
             </div>
             <div>
-              <h4 className="font-extrabold text-slate-900 text-base sm:text-lg">
+              <h4 className="font-bold text-slate-900 text-base">
                 Membutuhkan Kursi Roda atau Bantuan Masuk Masjid?
               </h4>
-              <p className="text-xs sm:text-sm text-slate-600 mt-0.5">
+              <p className="text-xs text-slate-600 mt-0.5">
                 Petugas marbot dan relawan siap membantu jamaah yang membutuhkan pendampingan saat sholat berjamaah atau sholat Jumat.
               </p>
             </div>
@@ -98,7 +98,7 @@ export const Facilities: React.FC = () => {
             href="https://wa.me/6281234567890?text=Assalamu'alaikum,%20mohon%20bantuan%20kursi%20roda/pendampingan%20sholat%20di%20Masjid%20Al-Ishlah"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3.5 rounded-xl bg-muhammadiyah-900 hover:bg-muhammadiyah-800 text-white font-bold text-xs sm:text-sm shadow-md transition-all whitespace-nowrap min-h-[48px] flex items-center justify-center"
+            className="px-5 py-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs sm:text-sm shadow-sm transition-all whitespace-nowrap min-h-[48px] flex items-center justify-center"
           >
             Hubungi Petugas Marbot
           </a>

@@ -44,55 +44,54 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenZiswaf }) => {
       </div>
 
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between min-h-[4.5rem] py-2.5">
           {/* Slot Placeholder Logo Resmi */}
-          <a href="#beranda" className="flex items-center gap-3">
-            <div className="px-2.5 py-1.5 border border-dashed border-slate-400 rounded bg-slate-50 text-[10px] font-mono text-slate-500 uppercase tracking-wider">
+          <a href="#beranda" className="flex items-center gap-2.5 flex-shrink-0">
+            <div className="px-2 py-1 border border-dashed border-slate-400 rounded bg-slate-50 text-[9px] sm:text-[10px] font-mono text-slate-500 uppercase tracking-wider flex-shrink-0">
               [Slot Logo]
             </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="text-xl font-bold tracking-tight text-slate-900">
+            <div className="flex-shrink-0">
+              <div className="flex items-center gap-1.5">
+                <span className="text-base sm:text-lg font-black tracking-tight text-slate-900 whitespace-nowrap">
                   MASJID AL-ISHLAH
                 </span>
-                <span className="hidden md:inline-block px-2 py-0.5 text-[10px] font-semibold bg-slate-100 text-slate-700 border border-slate-200 rounded">
+                <span className="hidden xl:inline-block px-1.5 py-0.5 text-[9px] font-semibold bg-slate-100 text-slate-700 border border-slate-200 rounded">
                   MUHAMMADIYAH
                 </span>
               </div>
-              <p className="text-xs text-slate-500">
+              <p className="text-[11px] text-slate-500 whitespace-nowrap">
                 Sidowungu, Menganti, Gresik
               </p>
             </div>
           </a>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden lg:flex items-center gap-1 xl:gap-2">
+          <div className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="px-3 py-2 text-sm font-medium text-slate-600 hover:text-slate-950 hover:bg-slate-100 rounded-lg transition-colors"
+                className="px-2 xl:px-2.5 py-1.5 text-xs xl:text-sm font-medium text-slate-600 hover:text-slate-950 hover:bg-slate-100 rounded transition-colors whitespace-nowrap"
               >
                 {link.name}
               </a>
             ))}
           </div>
 
-          {/* Action Tools */}
-          <div className="hidden md:flex items-center gap-3">
+          {/* Action Tools (Desktop) */}
+          <div className="hidden lg:flex items-center gap-2.5 flex-shrink-0">
             <SeniorFontControl />
             <button
               onClick={onOpenZiswaf}
-              className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-sm transition-all active:scale-98"
+              className="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs xl:text-sm shadow-sm transition-all whitespace-nowrap"
             >
               <HeartHandshake className="w-4 h-4 text-amber-400" />
               <span>Infaq & QRIS</span>
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex items-center gap-2 lg:hidden">
-            <SeniorFontControl />
+          {/* Mobile Hamburger Button (Clean Touch Target) */}
+          <div className="lg:hidden flex items-center flex-shrink-0">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2.5 rounded-lg text-slate-700 hover:text-slate-950 hover:bg-slate-100 focus:outline-none min-h-[48px] min-w-[48px] flex items-center justify-center"
@@ -105,18 +104,27 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenZiswaf }) => {
 
         {/* Mobile Navigation Drawer */}
         {isOpen && (
-          <div className="lg:hidden border-t border-slate-200 py-4 px-2 space-y-1 bg-white rounded-b-2xl shadow-xl">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={handleLinkClick}
-                className="block px-4 py-3 text-base font-medium text-slate-800 hover:bg-slate-100 rounded-xl transition-colors min-h-[48px] flex items-center"
-              >
-                {link.name}
-              </a>
-            ))}
-            <div className="pt-3 px-2">
+          <div className="lg:hidden border-t border-slate-200 py-4 px-4 space-y-3 bg-white rounded-b-2xl shadow-xl">
+            {/* Pengatur Ukuran Huruf di Mobile (Ramah Lansia) */}
+            <div className="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-between">
+              <span className="text-xs font-bold text-slate-700">Ukuran Huruf (Lansia):</span>
+              <SeniorFontControl />
+            </div>
+
+            <div className="space-y-1">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={handleLinkClick}
+                  className="block px-4 py-3 text-base font-medium text-slate-800 hover:bg-slate-100 rounded-xl transition-colors min-h-[48px] flex items-center"
+                >
+                  {link.name}
+                </a>
+              ))}
+            </div>
+
+            <div className="pt-2">
               <button
                 onClick={() => {
                   setIsOpen(false);

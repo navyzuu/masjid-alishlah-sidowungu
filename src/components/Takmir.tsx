@@ -28,21 +28,21 @@ export const Takmir: React.FC = () => {
           {MOCK_TAKMIR.map((member) => (
             <div
               key={member.id}
-              className="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:border-muhammadiyah-300 hover:bg-white shadow-sm hover:shadow-card transition-all"
+              className="p-5 rounded-xl bg-white border border-slate-200 shadow-sm transition-all"
             >
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-muhammadiyah-800 to-muhammadiyah-950 text-white flex items-center justify-center font-bold text-lg shadow-sm border border-surya-500/30">
+                <div className="w-12 h-12 rounded-lg bg-slate-100 text-slate-800 flex items-center justify-center font-bold text-base border border-slate-200">
                   {member.name.split(' ').map((n) => n[0]).slice(0, 2).join('')}
                 </div>
                 <div>
-                  <h3 className="font-extrabold text-slate-900 text-base sm:text-lg leading-tight">
+                  <h3 className="font-bold text-slate-900 text-base leading-tight">
                     {member.name}
                   </h3>
-                  <div className="text-xs sm:text-sm font-bold text-muhammadiyah-700 mt-0.5">
+                  <div className="text-xs font-semibold text-slate-700 mt-0.5">
                     {member.role}
                   </div>
-                  <div className="text-[11px] font-semibold text-slate-500 mt-1 flex items-center gap-1">
-                    <Shield className="w-3 h-3 text-surya-500" />
+                  <div className="text-[11px] text-slate-500 mt-1 flex items-center gap-1">
+                    <Shield className="w-3 h-3 text-slate-400" />
                     <span>{member.division}</span>
                   </div>
                 </div>
@@ -51,21 +51,21 @@ export const Takmir: React.FC = () => {
           ))}
         </div>
 
-        {/* Dewan Penasehat & Pengawas */}
-        <div className="mt-12 p-6 rounded-3xl bg-gradient-to-r from-muhammadiyah-900 to-muhammadiyah-950 text-white border border-muhammadiyah-800 flex flex-col md:flex-row items-center justify-between gap-6">
+        {/* Dewan Penasehat & Pengawas (Clean Bento Box) */}
+        <div className="mt-10 p-6 rounded-xl bg-slate-50 text-slate-800 border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1 text-center md:text-left">
-            <div className="text-xs font-bold text-surya-400 uppercase tracking-wider">
+            <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">
               Dewan Penasehat & Pengawas Syariah
             </div>
-            <h4 className="text-base sm:text-lg font-bold text-white">
-              Pimpinan Ranting Muhammadiyah & Pimpinan Ranting Aisyiyah Sidowungu
+            <h4 className="text-base font-bold text-slate-900">
+              Pimpinan Ranting Muhammadiyah & Aisyiyah Sidowungu
             </h4>
-            <p className="text-xs text-slate-300">
+            <p className="text-xs text-slate-600">
               Menjaga kemurnian aqidah, ketepatan hisab tarjih sholat, dan akuntabilitas pengelolaan aset wakaf.
             </p>
           </div>
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-muhammadiyah-800 text-xs font-semibold text-slate-200 border border-muhammadiyah-700">
-            <CheckCircle className="w-4 h-4 text-emerald-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white text-xs font-semibold text-slate-700 border border-slate-200 shadow-xs">
+            <CheckCircle className="w-4 h-4 text-emerald-600" />
             <span>Terdaftar di Lazismu Gresik</span>
           </div>
         </div>

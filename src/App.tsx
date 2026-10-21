@@ -16,13 +16,23 @@ import { PrayerTimes as PrayerTimesType, PrayerDateInfo, NextPrayerInfo } from '
 
 export const App: React.FC = () => {
   const [timings, setTimings] = useState<PrayerTimesType>(getFallbackTimings());
+  
+  // Format Tanggal Masehi & Hijriyah Sinkron (Tanpa Flash "Memuat...")
+  const now = new Date();
+  const daysIndo = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+  const monthsIndo = [
+    'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
+    'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'
+  ];
+  const initialGregorian = `${daysIndo[now.getDay()]}, ${now.getDate()} ${monthsIndo[now.getMonth()]} ${now.getFullYear()}`;
+
   const [dateInfo, setDateInfo] = useState<PrayerDateInfo>({
-    gregorianDate: 'Memuat tanggal...',
-    hijriDate: 'Memuat penanggalan...',
-    dayName: '',
+    gregorianDate: initialGregorian,
+    hijriDate: '10 Jumadil Awwal 1448 H',
+    dayName: daysIndo[now.getDay()],
   });
-  const [nextPrayer, setNextPrayer] = useState<NextPrayerInfo | null>(null);
-  const [isLoadingPrayer, setIsLoadingPrayer] = useState<boolean>(true);
+  const [nextPrayer, setNextPrayer] = useState<NextPrayerInfo | null>(() => getNextPrayer(getFallbackTimings()));
+  const [isLoadingPrayer, setIsLoadingPrayer] = useState<boolean>(false);
   const [isFallback, setIsFallback] = useState<boolean>(false);
   const [isZiswafOpen, setIsZiswafOpen] = useState<boolean>(false);
 
@@ -63,32 +73,9 @@ export const App: React.FC = () => {
     return () => clearInterval(interval);
   }, [timings]);
 
-  // 3. Subtle, Dignified GSAP Islamic Motion Animations
+  // 3. Motion Tanpa Memblokir Keterbacaan Konten (Opacity Tetap 100% Terbaca)
   useEffect(() => {
-    if (!mainContainerRef.current) return;
-
-    const ctx = gsap.context(() => {
-      // Fade in hero elements
-      gsap.from('#beranda h1, #beranda p', {
-        opacity: 0,
-        y: 20,
-        duration: 0.9,
-        stagger: 0.15,
-        ease: 'power2.out',
-      });
-
-      // Animate prayer cards entrance
-      gsap.from('#jadwal-sholat .grid > div', {
-        opacity: 0,
-        y: 25,
-        duration: 0.8,
-        stagger: 0.08,
-        ease: 'power2.out',
-        delay: 0.2,
-      });
-    }, mainContainerRef);
-
-    return () => ctx.revert();
+    // Tidak menggunakan GSAP opacity: 0 yang membuat teks tampak pudar/hilang
   }, []);
 
   return (

@@ -50,23 +50,23 @@ export const ZiswafModal: React.FC<ZiswafModalProps> = ({ isOpen, onClose }) => 
         <div className="space-y-6">
           
           {/* Card QRIS Standar Nasional */}
-          <div className="p-5 rounded-2xl bg-gradient-to-b from-slate-50 to-slate-100 border border-slate-200 text-center">
+          <div className="p-5 rounded-xl bg-slate-50 border border-slate-200 text-center">
             <div className="flex items-center justify-center gap-2 text-xs font-bold text-slate-700 uppercase tracking-wider mb-3">
-              <QrCode className="w-4 h-4 text-muhammadiyah-700" />
+              <QrCode className="w-4 h-4 text-slate-700" />
               <span>Pindai QRIS (Semua Dompet Digital & Mobile Banking)</span>
             </div>
 
             {/* Ilustrasi QRIS Stylized Bersih */}
-            <div className="inline-block p-4 bg-white rounded-2xl shadow-sm border border-slate-200 mx-auto">
-              <div className="w-48 h-48 bg-slate-900 rounded-xl p-2.5 flex flex-col items-center justify-between text-white relative">
+            <div className="inline-block p-4 bg-white rounded-xl shadow-xs border border-slate-200 mx-auto">
+              <div className="w-48 h-48 bg-slate-900 rounded-lg p-2.5 flex flex-col items-center justify-between text-white relative">
                 {/* QR Code Canvas Mockup */}
                 <svg viewBox="0 0 100 100" className="w-full h-full text-white fill-current">
                   <path d="M10,10 h30 v30 h-30 z M15,15 v20 h20 v-20 z" />
-                  <rect x="20" y="20" width="10" height="10" fill="#F59E0B" />
+                  <rect x="20" y="20" width="10" height="10" fill="#D97706" />
                   <path d="M60,10 h30 v30 h-30 z M65,15 v20 h20 v-20 z" />
-                  <rect x="70" y="20" width="10" height="10" fill="#F59E0B" />
+                  <rect x="70" y="20" width="10" height="10" fill="#D97706" />
                   <path d="M10,60 h30 v30 h-30 z M15,65 v20 h20 v-20 z" />
-                  <rect x="20" y="70" width="10" height="10" fill="#F59E0B" />
+                  <rect x="20" y="70" width="10" height="10" fill="#D97706" />
                   {/* Decorative QR Pattern */}
                   <rect x="45" y="15" width="8" height="8" />
                   <rect x="45" y="30" width="8" height="8" />
@@ -82,7 +82,7 @@ export const ZiswafModal: React.FC<ZiswafModalProps> = ({ isOpen, onClose }) => 
                   <rect x="80" y="80" width="8" height="8" />
                 </svg>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="bg-muhammadiyah-900 border-2 border-white rounded-lg p-1 text-[8px] font-black tracking-widest text-surya-400">
+                  <div className="bg-slate-900 border border-white rounded p-1 text-[8px] font-bold tracking-widest text-amber-400">
                     QRIS
                   </div>
                 </div>

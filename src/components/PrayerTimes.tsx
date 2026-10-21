@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { PrayerTimes as PrayerTimesType, PrayerDateInfo, NextPrayerInfo } from '../types';
 import { Clock, Info, ShieldCheck, RefreshCw, Sun, Sunset, Moon, Sunrise, Volume2 } from 'lucide-react';
-import { IslamicWatermark } from './IslamicMotif';
+import { IslamicWatermark, IslamicStarDivider, IslamicArabesqueBand } from './IslamicMotif';
 
 interface PrayerTimesProps {
   timings: PrayerTimesType;
@@ -114,14 +114,14 @@ export const PrayerTimes: React.FC<PrayerTimesProps> = ({
   };
 
   return (
-    <section id="jadwal-sholat" className="relative py-10 sm:py-14 bg-slate-50 border-b border-slate-200 overflow-hidden">
-      <IslamicWatermark position="top-left" size={320} opacity="opacity-[0.03]" />
-      <IslamicWatermark position="bottom-right" size={280} opacity="opacity-[0.02]" />
+    <section id="jadwal-sholat" className="relative py-12 sm:py-16 bg-slate-50 border-b border-slate-200 overflow-hidden">
+      <IslamicWatermark position="top-left" size={380} opacity="opacity-[0.08]" />
+      <IslamicWatermark position="bottom-right" size={320} opacity="opacity-[0.06]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header Section Jadwal Sholat (Tanpa Pill Badge) */}
-        <div className="text-center max-w-3xl mx-auto mb-7 space-y-2">
+        <div className="text-center max-w-3xl mx-auto mb-8 space-y-2">
           <div className="text-xs uppercase font-extrabold tracking-widest text-muhammadiyah-700 flex items-center justify-center gap-2">
             <Clock className="w-3.5 h-3.5 text-surya-600" />
             <span>Koordinat Presisi: 7°17'47.0"S 112°35'59.7"E &bull; Sidowungu Menganti</span>
@@ -130,6 +130,9 @@ export const PrayerTimes: React.FC<PrayerTimesProps> = ({
           <h2 className="text-2xl sm:text-3xl font-black text-muhammadiyah-950 tracking-tight">
             Jadwal Adzan & Waktu Sholat Sidowungu
           </h2>
+
+          <IslamicStarDivider />
+          <IslamicArabesqueBand className="-mt-2 mb-2" />
           
           <p className="text-xs sm:text-sm text-slate-600 font-medium">
             Wilayah Desa Sidowungu, Kecamatan Menganti, Kabupaten Gresik &bull; Waktu Indonesia Barat (WIB)
@@ -263,31 +266,10 @@ export const PrayerTimes: React.FC<PrayerTimesProps> = ({
                   }`}>
                     {item.time} <span className="text-xs font-sans font-bold">WIB</span>
                   </div>
-
-                  {item.isSubuh && item.originalTime && (
-                    <div className="mt-1 text-[10px] text-slate-500 font-medium">
-                      Kemenag: {item.originalTime} (+8 mnt)
-                    </div>
-                  )}
                 </div>
               </div>
             );
           })}
-        </div>
-
-        {/* Status Sumber API & Ketepatan Sidowungu Menganti */}
-        <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500 bg-white p-3.5 rounded-xl border border-slate-200">
-          <div className="flex items-center gap-2">
-            <span className={`w-2.5 h-2.5 rounded-full ${isFallback ? 'bg-amber-400' : 'bg-emerald-500'}`}></span>
-            <span>
-              {isFallback
-                ? 'Mode Hisab Offline Gresik (Koreksi Tarjih +8 menit aktif)'
-                : 'Terhubung Realtime API Astronomi Sidowungu, Menganti, Gresik (Kemenag Algoritma + Koreksi Fajar -18° Tarjih)'}
-            </span>
-          </div>
-          <div className="font-semibold text-slate-700">
-            Koreksi Waktu: Ikhtiyat +2 mnt &bull; Fajar Shadiq -18°
-          </div>
         </div>
 
       </div>

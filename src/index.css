@@ -60,3 +60,47 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   outline: 2px solid #0F2E4E !important;
   outline-offset: 2px !important;
 }
+
+/* Islamic Geometric Background & Motion Utilities */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 40s linear infinite;
+}
+
+.animate-float {
+  animation: floatGentle 6s ease-in-out infinite;
+}
+
+/* Islamic Arabesque Geometric Tile Pattern */
+.bg-islamic-pattern-dark {
+  background-color: #061A30;
+  background-image: radial-gradient(rgba(245, 158, 11, 0.18) 1.5px, transparent 1.5px),
+                    radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+}
+
+.bg-islamic-pattern-light {
+  background-color: #F8FAFC;
+  background-image: radial-gradient(rgba(18, 90, 155, 0.12) 1.5px, transparent 1.5px),
+                    radial-gradient(rgba(217, 119, 6, 0.10) 1px, transparent 1px);
+  background-size: 36px 36px;
+  background-position: 0 0, 18px 18px;
+}

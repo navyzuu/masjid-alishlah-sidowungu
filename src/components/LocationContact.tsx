@@ -1,12 +1,13 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Clock, Navigation, MessageCircle, ExternalLink } from 'lucide-react';
 import { MASJID_PROFILE } from '../data/mockData';
-import { IslamicStarDivider, IslamicWatermark } from './IslamicMotif';
+import { IslamicStarDivider, IslamicWatermark, IslamicArabesqueBand } from './IslamicMotif';
 
 export const LocationContact: React.FC = () => {
   return (
     <section id="lokasi" className="relative py-16 sm:py-24 bg-slate-50 border-b border-slate-200 overflow-hidden">
-      <IslamicWatermark position="top-right" size={340} opacity="opacity-[0.03]" />
+      <IslamicWatermark position="top-right" size={380} opacity="opacity-[0.08]" />
+      <IslamicWatermark position="bottom-left" size={320} opacity="opacity-[0.06]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -21,6 +22,7 @@ export const LocationContact: React.FC = () => {
           </h2>
 
           <IslamicStarDivider />
+          <IslamicArabesqueBand className="-mt-2 mb-2" />
           
           <p className="text-sm sm:text-base text-slate-600 font-medium">
             Kunjungi Masjid Al-Ishlah di Desa Sidowungu, Menganti, Gresik. Siaga menyambut jamaah dan musafir.

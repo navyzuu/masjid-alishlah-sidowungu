@@ -24,5 +24,19 @@ dist-ssr
 *.sw?
 *.tsbuildinfo
 
-# AI / Orchestra workspace (Wajib diabaikan)
+# AI / Orchestra workspace & task generation artifacts (Wajib diabaikan)
 workspace/
+Agent.md
+agent.md
+PRD.md
+prd.md
+Claude.md
+claude.md
+STATE.json
+state.json
+TASK.md
+task.md
+.gemini/
+.claude/
+.codex/
+.hermes/

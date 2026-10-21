@@ -76,16 +76,16 @@ Laporan ini diumumkan secara transparan kepada jamaah sholat Jumat dan diaudit o
         {/* 4 Kartu Ringkasan Finansial */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
           
-          {/* Saldo Akhir (Highlight Utama) */}
-          <div className="p-5 rounded-2xl bg-gradient-to-br from-muhammadiyah-900 to-muhammadiyah-950 text-white shadow-card border border-muhammadiyah-800 flex flex-col justify-between">
-            <div className="flex items-center justify-between text-xs text-surya-400 font-bold mb-2">
+          {/* Saldo Akhir (Highlight Utama Clean Bento) */}
+          <div className="p-5 rounded-xl bg-white border border-slate-300 shadow-sm flex flex-col justify-between">
+            <div className="flex items-center justify-between text-xs text-slate-600 font-bold mb-2">
               <span className="uppercase tracking-wider">Saldo Kas Aktif</span>
-              <Wallet className="w-5 h-5 text-surya-400" />
+              <Wallet className="w-5 h-5 text-slate-700" />
             </div>
-            <div className="text-2xl sm:text-3xl font-black text-surya-300 tracking-tight">
+            <div className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
               {formatRupiah(MOCK_KAS.saldoAkhir)}
             </div>
-            <p className="text-[11px] text-slate-300 mt-2 font-medium">
+            <p className="text-[11px] text-slate-500 mt-2 font-medium">
               Siap disalurkan untuk operasional & sosial umat
             </p>
           </div>

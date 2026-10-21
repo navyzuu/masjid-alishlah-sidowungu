@@ -73,51 +73,51 @@ export const About: React.FC = () => {
             </div>
           </div>
 
-          {/* Kolom Kanan: Visi & Misi Card */}
+          {/* Kolom Kanan: Visi & Misi Bento Card (Minimalist Clean) */}
           <div className="lg:col-span-5 space-y-5">
-            <div className="bg-gradient-to-br from-muhammadiyah-900 to-muhammadiyah-950 text-white rounded-3xl p-6 sm:p-8 shadow-card border border-muhammadiyah-700 space-y-6">
+            <div className="bg-slate-50 text-slate-800 rounded-2xl p-6 sm:p-7 border border-slate-200 shadow-sm space-y-6">
               
               {/* Visi */}
-              <div className="space-y-2 border-b border-muhammadiyah-800 pb-5">
-                <div className="flex items-center gap-2 text-surya-400 font-bold text-xs uppercase tracking-wider">
-                  <Compass className="w-4 h-4" />
+              <div className="space-y-2 border-b border-slate-200 pb-5">
+                <div className="flex items-center gap-2 text-slate-900 font-bold text-xs uppercase tracking-wider">
+                  <Compass className="w-4 h-4 text-slate-700" />
                   <span>Visi Masjid</span>
                 </div>
-                <p className="text-base sm:text-lg font-bold text-white leading-snug">
+                <p className="text-base font-bold text-slate-900 leading-snug">
                   &ldquo;Terwujudnya Masjid Al-Ishlah sebagai sentra ibadah yang khusyuk, mencerahkan peradaban umat, dan memakmurkan masyarakat Sidowungu yang berkemajuan.&rdquo;
                 </p>
               </div>
 
               {/* Misi */}
               <div className="space-y-3">
-                <div className="flex items-center gap-2 text-surya-400 font-bold text-xs uppercase tracking-wider">
-                  <Shield className="w-4 h-4" />
+                <div className="flex items-center gap-2 text-slate-900 font-bold text-xs uppercase tracking-wider">
+                  <Shield className="w-4 h-4 text-slate-700" />
                   <span>Misi Strategis</span>
                 </div>
-                <ul className="space-y-3 text-xs sm:text-sm text-slate-200">
+                <ul className="space-y-3 text-xs sm:text-sm text-slate-600">
                   <li className="flex items-start gap-2.5">
-                    <span className="w-5 h-5 rounded-full bg-surya-500/20 text-surya-400 font-bold flex items-center justify-center text-xs flex-shrink-0 mt-0.5">1</span>
-                    <span>Menyelenggarakan ibadah sholat lima waktu dan sholat Jumat yang tertib, khusyuk, dan sesuai tuntunan Rasulullah SAW.</span>
+                    <span className="w-5 h-5 rounded bg-slate-200 text-slate-800 font-bold flex items-center justify-center text-xs flex-shrink-0 mt-0.5">1</span>
+                    <span>Menyelenggarakan ibadah sholat fardhu dan Jumat yang tertib, khusyuk, sesuai tuntunan As-Sunnah.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <span className="w-5 h-5 rounded-full bg-surya-500/20 text-surya-400 font-bold flex items-center justify-center text-xs flex-shrink-0 mt-0.5">2</span>
-                    <span>Menghidupkan majelis ilmu, kajian Al-Qur'an, dan pendidikan dasar Islam bagi anak-anak dan generasi muda.</span>
+                    <span className="w-5 h-5 rounded bg-slate-200 text-slate-800 font-bold flex items-center justify-center text-xs flex-shrink-0 mt-0.5">2</span>
+                    <span>Menghidupkan majelis ilmu, pengajian Aisyiyah, dan pendidikan TPQ bagi generasi penerus.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <span className="w-5 h-5 rounded-full bg-surya-500/20 text-surya-400 font-bold flex items-center justify-center text-xs flex-shrink-0 mt-0.5">3</span>
-                    <span>Menyalurkan zakat, infaq, dan shodaqoh secara tepat sasaran untuk memberantas kemiskinan dan menolong dhuafa.</span>
+                    <span className="w-5 h-5 rounded bg-slate-200 text-slate-800 font-bold flex items-center justify-center text-xs flex-shrink-0 mt-0.5">3</span>
+                    <span>Menyalurkan zakat, infaq, dan shodaqoh secara tepat sasaran menolong lansia dan dhuafa.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <span className="w-5 h-5 rounded-full bg-surya-500/20 text-surya-400 font-bold flex items-center justify-center text-xs flex-shrink-0 mt-0.5">4</span>
-                    <span>Memelihara kebersihan, kenyamanan sarana fisik, dan keramahan lingkungan ibadah bagi segala usia.</span>
+                    <span className="w-5 h-5 rounded bg-slate-200 text-slate-800 font-bold flex items-center justify-center text-xs flex-shrink-0 mt-0.5">4</span>
+                    <span>Memelihara kebersihan, kenyamanan fisik, dan keramahan akses ibadah bagi lansia.</span>
                   </li>
                 </ul>
               </div>
 
               {/* Info Afiliasi Resmi */}
-              <div className="pt-4 border-t border-muhammadiyah-800 text-[11px] text-slate-400 flex items-center justify-between">
-                <span>Afiliasi: PRM Sidowungu - PCM Menganti</span>
-                <span className="text-surya-400 font-semibold">Gresik, Jatim</span>
+              <div className="pt-4 border-t border-slate-200 text-[11px] text-slate-500 flex items-center justify-between">
+                <span>Afiliasi: PRM Sidowungu &bull; PCM Menganti</span>
+                <span className="font-semibold text-slate-700">Gresik, Jawa Timur</span>
               </div>
             </div>
 

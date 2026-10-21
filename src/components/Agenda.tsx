@@ -54,27 +54,27 @@ export const Agenda: React.FC = () => {
           {filteredAgenda.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-card hover:border-muhammadiyah-300 transition-all flex flex-col justify-between"
+              className="bg-white rounded-xl border border-slate-200 p-6 shadow-sm transition-all flex flex-col justify-between"
             >
               <div>
                 {/* Header Kartu: Kategori & Badge */}
                 <div className="flex items-center justify-between gap-2 mb-4">
-                  <span className="px-3 py-1 rounded-full text-xs font-black bg-muhammadiyah-100 text-muhammadiyah-800 border border-muhammadiyah-200">
+                  <span className="px-2.5 py-0.5 rounded text-xs font-semibold bg-slate-100 text-slate-800 border border-slate-200">
                     {item.category}
                   </span>
-                  <span className="text-[11px] font-bold text-surya-700 bg-surya-100 px-2.5 py-0.5 rounded-md border border-surya-300">
+                  <span className="text-[11px] font-semibold text-amber-900 bg-amber-50 px-2.5 py-0.5 rounded border border-amber-200">
                     {item.badge}
                   </span>
                 </div>
 
                 {/* Judul Kajian */}
-                <h3 className="text-lg font-black text-slate-900 tracking-tight mb-2 leading-snug">
+                <h3 className="text-base font-bold text-slate-900 tracking-tight mb-2 leading-snug">
                   {item.title}
                 </h3>
 
                 {/* Pemateri */}
-                <div className="flex items-start gap-2 text-xs sm:text-sm text-slate-700 mb-4 bg-slate-50 p-2.5 rounded-xl border border-slate-100">
-                  <User className="w-4 h-4 text-muhammadiyah-700 flex-shrink-0 mt-0.5" />
+                <div className="flex items-start gap-2 text-xs sm:text-sm text-slate-700 mb-4 bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+                  <User className="w-4 h-4 text-slate-600 flex-shrink-0 mt-0.5" />
                   <span className="font-semibold">{item.speaker}</span>
                 </div>
 
@@ -87,15 +87,15 @@ export const Agenda: React.FC = () => {
               {/* Footer Kartu: Waktu & Lokasi */}
               <div className="pt-4 border-t border-slate-100 space-y-2 text-xs text-slate-600">
                 <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4 text-surya-600 flex-shrink-0" />
+                  <Calendar className="w-4 h-4 text-slate-500 flex-shrink-0" />
                   <span className="font-bold text-slate-800">{item.day}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-muhammadiyah-600 flex-shrink-0" />
+                  <Clock className="w-4 h-4 text-slate-500 flex-shrink-0" />
                   <span>{item.time}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                  <MapPin className="w-4 h-4 text-slate-500 flex-shrink-0" />
                   <span>{item.location}</span>
                 </div>
               </div>
@@ -104,9 +104,9 @@ export const Agenda: React.FC = () => {
         </div>
 
         {/* Banner Layanan Ramah Lansia pada Kajian Ahad */}
-        <div className="mt-12 p-6 rounded-3xl bg-muhammadiyah-50 border border-muhammadiyah-200 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="mt-10 p-6 rounded-xl bg-slate-50 border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1 text-center md:text-left">
-            <h4 className="text-base sm:text-lg font-bold text-muhammadiyah-950">
+            <h4 className="text-base font-bold text-slate-900">
               Kajian Ahad Shubuh Ramah Lansia
             </h4>
             <p className="text-xs sm:text-sm text-slate-600">
@@ -117,7 +117,7 @@ export const Agenda: React.FC = () => {
             href="https://wa.me/6281234567890?text=Assalamu'alaikum%20Takmir%20Masjid%20Al-Ishlah,%20saya%20ingin%20menanyakan%20informasi%20kajian"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-3 rounded-xl bg-muhammadiyah-800 hover:bg-muhammadiyah-700 text-white font-bold text-xs sm:text-sm shadow-sm transition-all whitespace-nowrap min-h-[48px] flex items-center justify-center"
+            className="px-5 py-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs sm:text-sm shadow-sm transition-all whitespace-nowrap min-h-[48px] flex items-center justify-center"
           >
             Tanya Jadwal via WhatsApp
           </a>

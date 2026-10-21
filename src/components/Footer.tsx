@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-muhammadiyah-950 text-slate-300 border-t border-muhammadiyah-800">
+    <footer className="bg-slate-50 text-slate-700 border-t border-slate-200">
       
       {/* Bagian Utama Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
@@ -17,25 +17,25 @@ export const Footer: React.FC = () => {
           {/* Kolom Profil Masjid (lg:col-span-5) */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="px-2.5 py-1.5 border border-dashed border-slate-600 rounded bg-slate-900 text-[10px] font-mono text-slate-400 uppercase tracking-wider">
+              <div className="px-2.5 py-1.5 border border-dashed border-slate-400 rounded bg-white text-[10px] font-mono text-slate-600 uppercase tracking-wider">
                 [Slot Logo]
               </div>
               <div>
-                <span className="text-xl font-bold text-white tracking-tight block">
+                <span className="text-xl font-bold text-slate-900 tracking-tight block">
                   MASJID AL-ISHLAH
                 </span>
-                <span className="text-xs text-amber-400 font-semibold tracking-wider uppercase">
+                <span className="text-xs text-amber-700 font-semibold tracking-wider uppercase">
                   Pimpinan Ranting Muhammadiyah Sidowungu
                 </span>
               </div>
             </div>
 
-            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-md">
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-md">
               Pusat dakwah pencerahan, pembinaan aqidah shahihah, dan pelayanan sosial kemanusiaan masyarakat Desa Sidowungu, Kecamatan Menganti, Kabupaten Gresik, Jawa Timur.
             </p>
 
-            <div className="p-3.5 rounded-xl bg-muhammadiyah-900/80 border border-muhammadiyah-800 text-xs text-slate-300 flex items-center gap-2.5">
-              <Clock className="w-4 h-4 text-surya-400 flex-shrink-0" />
+            <div className="p-3.5 rounded-lg bg-white border border-slate-200 text-xs text-slate-600 flex items-center gap-2.5 shadow-xs">
+              <Clock className="w-4 h-4 text-slate-500 flex-shrink-0" />
               <span>
                 Adzan Subuh Berpedoman pada <strong>Hisab Tarjih Muhammadiyah (-18°) / +8 Menit</strong>.
               </span>
@@ -44,47 +44,47 @@ export const Footer: React.FC = () => {
 
           {/* Kolom Tautan Cepat (lg:col-span-3) */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-sm font-extrabold text-white uppercase tracking-wider">
+            <h4 className="text-sm font-bold text-slate-900 uppercase tracking-wider">
               Navigasi Halaman
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>
-                <a href="#beranda" className="text-slate-400 hover:text-surya-300 transition-colors">
+                <a href="#beranda" className="text-slate-600 hover:text-slate-950 transition-colors">
                   &bull; Beranda Utama
                 </a>
               </li>
               <li>
-                <a href="#jadwal-sholat" className="text-slate-400 hover:text-surya-300 transition-colors">
+                <a href="#jadwal-sholat" className="text-slate-600 hover:text-slate-950 transition-colors">
                   &bull; Jadwal Adzan Sidowungu
                 </a>
               </li>
               <li>
-                <a href="#profil" className="text-slate-400 hover:text-surya-300 transition-colors">
+                <a href="#profil" className="text-slate-600 hover:text-slate-950 transition-colors">
                   &bull; Profil & Visi Misi
                 </a>
               </li>
               <li>
-                <a href="#transparansi-kas" className="text-slate-400 hover:text-surya-300 transition-colors">
+                <a href="#transparansi-kas" className="text-slate-600 hover:text-slate-950 transition-colors">
                   &bull; Laporan Kas & Infaq
                 </a>
               </li>
               <li>
-                <a href="#agenda" className="text-slate-400 hover:text-surya-300 transition-colors">
+                <a href="#agenda" className="text-slate-600 hover:text-slate-950 transition-colors">
                   &bull; Jadwal Kajian Ahad
                 </a>
               </li>
               <li>
-                <a href="#fasilitas" className="text-slate-400 hover:text-surya-300 transition-colors">
+                <a href="#fasilitas" className="text-slate-600 hover:text-slate-950 transition-colors">
                   &bull; Fasilitas Ramah Lansia
                 </a>
               </li>
               <li>
-                <a href="#pengurus" className="text-slate-400 hover:text-surya-300 transition-colors">
+                <a href="#pengurus" className="text-slate-600 hover:text-slate-950 transition-colors">
                   &bull; Susunan Takmir Masjid
                 </a>
               </li>
               <li>
-                <a href="#lokasi" className="text-slate-400 hover:text-surya-300 transition-colors">
+                <a href="#lokasi" className="text-slate-600 hover:text-slate-950 transition-colors">
                   &bull; Lokasi & Google Maps
                 </a>
               </li>
@@ -93,20 +93,20 @@ export const Footer: React.FC = () => {
 
           {/* Kolom Kontak & Alamat (lg:col-span-4) */}
           <div className="lg:col-span-4 space-y-3">
-            <h4 className="text-sm font-extrabold text-white uppercase tracking-wider">
+            <h4 className="text-sm font-bold text-slate-900 uppercase tracking-wider">
               Sekretariat Takmir
             </h4>
-            <div className="space-y-2.5 text-xs sm:text-sm text-slate-400">
+            <div className="space-y-2.5 text-xs sm:text-sm text-slate-600">
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-surya-400 flex-shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-slate-500 flex-shrink-0 mt-0.5" />
                 <span>{MASJID_PROFILE.address}</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                <Phone className="w-4 h-4 text-emerald-600 flex-shrink-0" />
                 <span>{MASJID_PROFILE.phone}</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-sky-400 flex-shrink-0" />
+                <Mail className="w-4 h-4 text-slate-500 flex-shrink-0" />
                 <span>{MASJID_PROFILE.email}</span>
               </div>
             </div>
@@ -116,7 +116,7 @@ export const Footer: React.FC = () => {
                 href={MASJID_PROFILE.mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs font-bold text-surya-400 hover:text-surya-300 underline"
+                className="inline-flex items-center gap-2 text-xs font-bold text-slate-800 hover:text-slate-950 underline"
               >
                 Petunjuk Arah Google Maps &rarr;
               </a>
@@ -127,20 +127,20 @@ export const Footer: React.FC = () => {
       </div>
 
       {/* Baris Bawah Hak Cipta & Tombol Kembali ke Atas */}
-      <div className="bg-muhammadiyah-950/90 border-t border-muhammadiyah-900 py-6 px-4 sm:px-6 lg:px-8">
+      <div className="bg-slate-100/70 border-t border-slate-200 py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div className="text-center sm:text-left">
             &copy; {new Date().getFullYear()} Masjid Al-Ishlah Sidowungu &bull; Pimpinan Ranting Muhammadiyah Sidowungu, PCM Menganti Gresik.
           </div>
 
           <div className="flex items-center gap-4">
-            <span className="text-slate-600">Domain: Masjid-AlIshlah.napuiss.my.id</span>
+            <span className="text-slate-500">Domain: Masjid-AlIshlah.napuiss.my.id</span>
             <button
               onClick={scrollToTop}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-muhammadiyah-900 hover:bg-muhammadiyah-800 text-slate-300 hover:text-white transition-colors"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 transition-colors shadow-xs"
               aria-label="Kembali ke atas halaman"
             >
-              <ArrowUp className="w-3.5 h-3.5 text-surya-400" />
+              <ArrowUp className="w-3.5 h-3.5 text-slate-600" />
               <span>Ke Atas</span>
             </button>
           </div>
